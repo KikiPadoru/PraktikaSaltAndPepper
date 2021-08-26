@@ -1,15 +1,8 @@
 import re
-
 def is_palindrome(word):
-    if(type(word) is int):
-        word = str(word)
-    if(type(word) is not str):
-        return False
-    word = re.sub(r'[^\w]', '', word)
-    word = word.lower()
-    print(word)
-    len_word = len(word) // 2
-    for i in range(len_word+1):
+    if (type(word) is not str and type(word) is not int): return False
+    word = str(word) if type(word) is int else re.sub(r'[^\w]', '', word).lower()
+    for i in range(len(word) // 2 + 1):
         if len(word) < 2: return True
         if word[0] != word[-1]: return False
         word = word[1:-1]
