@@ -3,8 +3,8 @@ def multiply_numbers(my_object = None):
         result = list(str(my_object))
         res = 1
         for i in result :
-          if i.isdigit():
-              res *= int(i)
+            if i.isdigit():
+                res *= int(i)
         return res
     return None
 
